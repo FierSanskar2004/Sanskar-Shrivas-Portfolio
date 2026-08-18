@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -12,101 +12,95 @@
   <div class="floating-orb orb1"></div>
   <div class="floating-orb orb2"></div>
 
-  <header class="site-header">
-    <div class="header-container">
-      <div class="site-branding">
+  <header>
+    <div class="header-inner">
+      <div class="header-left">
         <div class="avatar">SS</div>
-        <div class="branding-text">
-          <div class="site-title">Sanskar Shrivas</div>
-          <div class="site-subtitle">Data Analyst &amp; Science Platform</div>
+        <div>
+          <div class="name">Sanskar Shrivas</div>
+          <div class="title-tag">Data Analyst &amp; Science Platform</div>
         </div>
       </div>
-      <nav class="main-navigation" aria-label="Main navigation">
-        <ul class="nav-list">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="projects.html" class="nav-link">Projects</a></li>
-          <li><a href="contacts.html" class="nav-link">Contact me</a></li>
-        </ul>
-      </nav>
       <div class="header-right">
-        <div class="availability-badge">
-          <span class="status-indicator"></span>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="contacts.html">Contact me</a>
+        </div>
+        <div class="status-badge">
+          <span class="status-dot"></span>
           Available Jun 2026
         </div>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
+        <button class="theme-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
       </div>
     </div>
   </header>
 
-  <main class="main-content">
+  <main>
 
     <!-- KPI ROW -->
-    <section class="metrics-section" aria-label="Key metrics">
-      <div class="metrics-grid">
-        <div class="metric-card">
-          <div class="metric-label">Database</div>
-          <div class="metric-value">PostgreSQL</div>
-          <div class="metric-sub">Multi-schema &amp; indexing</div>
-          <div class="metric-icon">🗄</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-label">Pipeline</div>
-          <div class="metric-value">ETL · Python</div>
-          <div class="metric-sub">Automated cleaning scripts</div>
-          <div class="metric-icon">⚙</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-label">Reporting</div>
-          <div class="metric-value">Power BI</div>
-          <div class="metric-sub">KPI dashboards &amp; telemetry</div>
-          <div class="metric-icon">📊</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-label">AI / GenAI</div>
-          <div class="metric-value">RAG · LLM</div>
-          <div class="metric-sub">LangChain &amp; LangGraph</div>
-          <div class="metric-icon">🤖</div>
-        </div>
+    <section class="kpi-row" aria-label="Key metrics">
+      <div class="kpi-card">
+        <div class="kpi-label">Database</div>
+        <div class="kpi-value">PostgreSQL</div>
+        <div class="kpi-sub">Multi-schema &amp; indexing</div>
+        <div class="kpi-icon">🗄</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Pipeline</div>
+        <div class="kpi-value">ETL · Python</div>
+        <div class="kpi-sub">Automated cleaning scripts</div>
+        <div class="kpi-icon">⚙</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Reporting</div>
+        <div class="kpi-value">Power BI</div>
+        <div class="kpi-sub">KPI dashboards &amp; telemetry</div>
+        <div class="kpi-icon">📊</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">AI / GenAI</div>
+        <div class="kpi-value">RAG · LLM</div>
+        <div class="kpi-sub">LangChain &amp; LangGraph</div>
+        <div class="kpi-icon">🤖</div>
       </div>
     </section>
 
     <!-- ANALYST PROFILE -->
-    <aside class="profile-section" aria-label="Analyst profile">
-      <div class="section-title">Analyst Profile</div>
-      <p class="profile-description">
+    <aside class="panel" aria-label="Analyst profile">
+      <div class="panel-title">Analyst Profile</div>
+      <p class="profile-bio">
         CS undergrad specializing in relational schema synthesis, structured database pipelines, and translating multi-source data payloads into actionable business intelligence.
       </p>
 
-      <div class="skill-group">
-        <div class="skill-group-label">Databases</div>
-        <div class="skill-tags">
-          <span class="skill-tag">PostgreSQL 18</span>
-          <span class="skill-tag">MySQL</span>
-          <span class="skill-tag">SQLite</span>
-          <span class="skill-tag">pgAdmin 4</span>
+      <div class="tag-group">
+        <div class="tag-group-label">Databases</div>
+        <div class="tags">
+          <span class="tag">PostgreSQL 18</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">SQLite</span>
+          <span class="tag">pgAdmin 4</span>
         </div>
       </div>
 
-      <div class="skill-group">
-        <div class="skill-group-label">Analysis Stack</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Pandas</span>
-          <span class="skill-tag">NumPy</span>
-          <span class="skill-tag">R</span>
-          <span class="skill-tag">Power BI</span>
-          <span class="skill-tag">Excel</span>
-          <span class="skill-tag">MATLAB</span>
+      <div class="tag-group">
+        <div class="tag-group-label">Analysis Stack</div>
+        <div class="tags">
+          <span class="tag">Pandas</span>
+          <span class="tag">NumPy</span>
+          <span class="tag">R</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">Excel</span>
+          <span class="tag">MATLAB</span>
         </div>
       </div>
     </aside>
 
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-content">
-      <span class="footer-text">Sanskar Shrivas · Portfolio Dashboard · 2026</span>
-      <span class="footer-subtext">All metrics verified</span>
-    </div>
+  <footer>
+    <span class="footer-line">Sanskar Shrivas · Portfolio Dashboard · 2026</span>
+    <span class="footer-line text-sm">All metrics verified</span>
   </footer>
 
   <script src="Script.js"></script>

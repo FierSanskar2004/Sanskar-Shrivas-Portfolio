@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -12,41 +12,37 @@
   <div class="floating-orb orb1"></div>
   <div class="floating-orb orb2"></div>
 
-  <header class="site-header">
-    <div class="header-container">
-      <div class="site-branding">
+  <header>
+    <div class="header-inner">
+      <div class="header-left">
         <div class="avatar">SS</div>
-        <div class="branding-text">
-          <div class="site-title">Sanskar Shrivas</div>
-          <div class="site-subtitle">Data Analyst &amp; Science Platform</div>
+        <div>
+          <div class="name">Sanskar Shrivas</div>
+          <div class="title-tag">Data Analyst &amp; Science Platform</div>
         </div>
       </div>
-      <nav class="main-navigation" aria-label="Main navigation">
-        <ul class="nav-list">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="projects.html" class="nav-link">Projects</a></li>
-          <li><a href="contacts.html" class="nav-link">Contact me</a></li>
-        </ul>
-      </nav>
       <div class="header-right">
-        <div class="availability-badge">
-          <span class="status-indicator"></span>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="contacts.html">Contact me</a>
+        </div>
+        <div class="status-badge">
+          <span class="status-dot"></span>
           Available Jun 2026
         </div>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
+        <button class="theme-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">🌙</button>
       </div>
     </div>
   </header>
 
-  <main class="main-content">
+  <main>
 
     <!-- PROJECT EXPLORER -->
-    <section class="projects-section" id="projects" aria-label="Project explorer">
-      <div class="section-header">
-        <h2 class="section-title">Schema Explorer</h2>
-      </div>
+    <section class="panel project-explorer" id="projects" aria-label="Project explorer">
+      <div class="panel-title no-border-bottom">Schema Explorer</div>
 
-      <div class="filter-controls" role="group" aria-label="Filter projects">
+      <div class="filter-row" role="group" aria-label="Filter projects">
         <button class="filter-btn active" onclick="filterDB('all')" id="btn-all">All</button>
         <button class="filter-btn" onclick="filterDB('pipeline')" id="btn-pipeline">ETL_Pipelines</button>
         <button class="filter-btn" onclick="filterDB('sql')" id="btn-sql">PostgreSQL</button>
@@ -54,8 +50,8 @@
       </div>
       <p class="hint">→ Click row to load project spec</p>
 
-      <div class="table-container">
-        <table class="data-table">
+      <div class="table-wrap">
+        <table class="project-table">
           <thead>
             <tr>
               <th>Schema_Ref</th>
@@ -65,7 +61,7 @@
             </tr>
           </thead>
           <tbody id="project-table">
-            <tr onclick="loadProject(1)" data-cat="pipeline" class="selected-row">
+            <tr onclick="loadProject(1)" data-cat="pipeline" class="selected">
               <td class="row-title">Multi-Schema Banking Platform</td>
               <td>Python, PostgreSQL, FastAPI</td>
               <td>Unifies SQLite + MySQL + Postgres</td>
@@ -94,9 +90,9 @@
       </div>
 
       <div class="project-viewer" id="project-viewer">
-        <div class="viewer-title" id="viewer-title">Multi-Schema Banking Data Platform</div>
-        <p class="viewer-description" id="viewer-desc">A unified analytical pipeline integrating disparate SQLite, MySQL, and PostgreSQL environments using lightweight FastAPI validation layers.</p>
-        <ul class="viewer-highlights" id="viewer-bullets">
+        <div class="viewer-name" id="viewer-title">Multi-Schema Banking Data Platform</div>
+        <p class="viewer-desc" id="viewer-desc">A unified analytical pipeline integrating disparate SQLite, MySQL, and PostgreSQL environments using lightweight FastAPI validation layers.</p>
+        <ul class="viewer-bullets" id="viewer-bullets">
           <li>Engineered clean automated ingestion scripts maintaining strict compliance across diverse schemas.</li>
           <li>Created transactional auditing configurations validating consistency constraints for thousands of incoming rows.</li>
           <li>Constructed modular target views ensuring high pipeline throughput for visual analytical charts.</li>
@@ -105,20 +101,18 @@
     </section>
 
     <!-- EXPERIENCE -->
-    <section class="experience-section" id="experience" aria-label="Experience log">
-      <h2 class="section-title">Work Log</h2>
+    <section class="panel" id="experience" aria-label="Experience log">
+      <div class="panel-title">Work Log</div>
 
-      <div class="experience-item">
-        <div class="experience-header">
-          <div class="company-info">
-            <div class="company-name">Celsior</div>
-            <div class="role-title">Data Science Intern</div>
-            <div class="status-badge live">Active</div>
-          </div>
+      <div class="exp-item">
+        <div class="exp-left">
+          <div class="exp-company">Celsior</div>
+          <div class="exp-role">Data Science Intern</div>
+          <div class="exp-status live">Active</div>
         </div>
-        <div class="experience-content">
-          <div class="timeline">MAR 2026 — JUN 2026 (Expected: 16.09.2026)</div>
-          <ul class="responsibilities">
+        <div class="exp-detail">
+          <div class="exp-timeline">MAR 2026 — JUN 2026 (Expected: 16.09.2026)</div>
+          <ul class="exp-bullets">
             <li>Designing automated ETL pipelines using Python and PostgreSQL 18 to clean, normalize, and load disparate file payloads into relational database structures.</li>
             <li>Normalizing large-scale tables to streamline query optimization and accelerate analytical reporting loops.</li>
             <li>Deploying Power BI dashboards translating complex validation logs into real-time executive metrics.</li>
@@ -127,17 +121,15 @@
         </div>
       </div>
 
-      <div class="experience-item">
-        <div class="experience-header">
-          <div class="company-info">
-            <div class="company-name">CodeBeat</div>
-            <div class="role-title">Data Science Intern</div>
-            <div class="status-badge done">Completed</div>
-          </div>
+      <div class="exp-item">
+        <div class="exp-left">
+          <div class="exp-company">CodeBeat</div>
+          <div class="exp-role">Data Science Intern</div>
+          <div class="exp-status done">Completed</div>
         </div>
-        <div class="experience-content">
-          <div class="timeline">JUN 2025 — JUL 2025</div>
-          <ul class="responsibilities">
+        <div class="exp-detail">
+          <div class="exp-timeline">JUN 2025 — JUL 2025</div>
+          <ul class="exp-bullets">
             <li>Authored modular Python modules with Pandas/NumPy to ingest, filter, and structure messy transaction CSV data.</li>
             <li>Designed reusable Matplotlib rendering scripts to deliver data stories and statistical correlations.</li>
             <li>Constructed exploratory sandboxes to investigate anomalous behaviors inside testing systems.</li>
@@ -148,11 +140,9 @@
 
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-content">
-      <span class="footer-text">Sanskar Shrivas · Portfolio Dashboard · 2026</span>
-      <span class="footer-subtext">All metrics verified</span>
-    </div>
+  <footer>
+    <span class="footer-line">Sanskar Shrivas · Portfolio Dashboard · 2026</span>
+    <span class="footer-line text-sm">All metrics verified</span>
   </footer>
 
   <script src="Script.js"></script>
